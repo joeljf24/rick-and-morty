@@ -1,4 +1,6 @@
-import { useState } from "react";
+import { useState } from 'react';
+import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
+import { SearchIcon } from './styled.components';
    
 export default function SearchBar({onSearch}) {
    const [id, setId] = useState('');
@@ -9,8 +11,8 @@ export default function SearchBar({onSearch}) {
 
    return (
       <div>
-         <input type='search' onChange={handleChange} value={id}/>
-         <button onClick={() => {onSearch(id); setId('')}}>Agregar</button>
+         <input placeholder='Intro ID (1-826)' type='search' onChange={handleChange} value={id}/>
+         <SearchIcon icon={faMagnifyingGlass} onClick={() => {onSearch(id); setId('')}}></SearchIcon>
       </div>
    );
 }

@@ -1,0 +1,49 @@
+.cardContainer{
+display: flex;
+flex-direction: column;
+align-items: center;
+background-image: url('../../assets/fondoDeCarta.jpg');
+background-position: center;
+width: auto;
+border: 3px solid white;
+border-radius: 10px;
+padding: 10px;
+cursor: pointer;
+-moz-animation-name: grayscale;
+backface-visibility: hidden;
+transition: transform 0.5s ease-out;
+}
+
+.cardContainer:hover {
+    transform: scale(1.02);
+}
+
+.imageContainer {
+    position: relative;
+    text-align: center;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.closeButton {
+    opacity: 0.8;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+.closeButton:hover {
+    background-color: red;
+    color: white;
+    transition: 0.2s;
+}
+
+.name {
+    color: black;
+}
+
+.characterImage {
+    display: block;
+    width: 100%;
+    height: auto;
+}

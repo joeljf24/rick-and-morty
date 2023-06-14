@@ -17,30 +17,6 @@ function App() {
          }
       });
    }
- 
-   const randomize = () => {
-      let haveIt = [];
-      let random = (Math.random() * 826).toFixed();
-
-      random = Number(random);
-
-      if(!haveIt.includes(random)) {
-         haveIt.push(random);
-         fetch(`https://rickandmortyapi.com/api/character/${random}`)
-         .then((response) => response.json())
-         .then((data) => {
-            if (data.name) {
-               setCharacters((oldChars) => [...oldChars, data]);
-            } else {
-               alert('¡No hay personajes con este ID!');
-            }
-         });
-      }
-      else {
-         alert('Ya agregaste a todos los personajes')
-         return false
-      }
-   }
 
    const onClose = (id) => {
       const charactersFiltered = characters.filter(character => character.id !== Number(id))
@@ -49,7 +25,7 @@ function App() {
 
    return (
       <div className='App'>
-         <Nav onSearch={onSearch} random={randomize}/>
+         <Nav onSearch={onSearch}/>
          <Cards characters={characters} onClose={onClose}/>
       </div>
    );
