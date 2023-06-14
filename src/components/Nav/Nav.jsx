@@ -1,7 +1,8 @@
 import SearchBar from '../SearchBar/SearchBar';
-import style from './Nav.module.css'
+import { Link } from 'react-router-dom';
+import style from './Nav.module.css';
 import { RandomIcon } from './styled.components';
-import { faShuffle } from '@fortawesome/free-solid-svg-icons'
+import { faShuffle } from '@fortawesome/free-solid-svg-icons';
 
 
 const Nav = ({onSearch}) => {
@@ -14,8 +15,14 @@ const Nav = ({onSearch}) => {
     
     return (
         <nav className={style.topBar}>
-            <SearchBar onSearch={onSearch}/>
+            <button>
+                <Link to='/home'>HOME</Link>
+            </button>
+            <button>
+                <Link to='/about'>ABOUT</Link>
+            </button>
             <RandomIcon icon={faShuffle} onClick={randomize}></RandomIcon>
+            <SearchBar onSearch={onSearch}/>
         </nav>
     )
 }
