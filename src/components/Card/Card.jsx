@@ -1,15 +1,22 @@
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import style from './Card.module.css';
 
 export default function Card({id, name, status, species, gender, origin, image, onClose}) {
    return (
       <div className={style.cardContainer}>
-         <div className={style.imageContainer}>
+         
+         <div> 
             <button className={style.closeButton} onClick={() => onClose(id)}>X</button>
+         </div>
+         
+         <div className={style.imageContainer}>
             <img className={style.characterImage} src={image} alt='' />
-            <Link to={`/detail/${id}`}>
+         </div>
+
+         <div>
+            <NavLink className={style.link} to={`/detail/${id}`}>
                <h2 className={style.name}>{name}</h2>
-            </Link> 
+            </NavLink> 
          </div>
 
          {/* <div>

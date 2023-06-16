@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 import { SearchIcon } from './styled.components';
+import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
    
 export default function SearchBar({onSearch}) {
    const [id, setId] = useState('');
