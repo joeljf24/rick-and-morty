@@ -6,7 +6,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(to left, black, rgb(54, 54, 54) 100%);
+  background: url(./assets/Desktop-2023.06.19-15.20.49.02.DVR_Trim\ \(1\).gif);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  /* background: linear-gradient(to left, black, rgb(54, 54, 54) 100%); */
   text-align: center;
 }
 

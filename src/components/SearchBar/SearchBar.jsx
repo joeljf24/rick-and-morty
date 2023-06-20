@@ -1,18 +1,21 @@
 import { useState } from 'react';
-import { SearchIcon } from './styled.components';
-import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
+import style from './SearchBar.module.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
    
 export default function SearchBar({onSearch}) {
    const [id, setId] = useState('');
 
-   const handleChange = (event) => {
+   const handleChangeSearch = (event) => {
       setId(event.target.value);
    }
 
    return (
       <div>
-         <input placeholder='Intro ID (1-826)' type='search' onChange={handleChange} value={id}/>
-         <SearchIcon icon={faMagnifyingGlass} onClick={() => {onSearch(id); setId('')}}></SearchIcon>
+         <form action="" className={style.searchBar}>
+            <input placeholder='Intro ID (1-826)' type='search' onChange={handleChangeSearch} value={id}/>
+            <button onClick={() => {onSearch(id); setId('')}}><FontAwesomeIcon icon={faMagnifyingGlass} /></button>
+         </form>
       </div>
    );
 }

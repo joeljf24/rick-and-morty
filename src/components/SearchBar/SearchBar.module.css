@@ -1,0 +1,38 @@
+.searchBar {
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    border-radius: 60px;
+    backdrop-filter: blur(4px);
+}
+
+.searchBar input{
+    width: 0;
+    max-width: 300px;
+    background: transparent;
+    padding: 0px 0px;
+    border: 0;
+    outline: none;
+    font-size: 20px;
+    color: #cac7ff;
+    transition: all 0.6s ease;
+}
+
+.searchBar:hover input{
+    width: 300px;
+    padding: 0px 30px;
+    transition: all 0.6s ease;
+}
+
+.searchBar input:focus{
+    width: 300px;
+    padding: 0px 30px;
+}
+
+.searchBar button{
+    border: 0;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background: #16ec2f;
+    cursor: pointer;
+}

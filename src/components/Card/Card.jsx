@@ -5,18 +5,17 @@ export default function Card({id, name, status, species, gender, origin, image, 
    return (
       <div className={style.cardContainer}>
          
-         <div> 
-            <button className={style.closeButton} onClick={() => onClose(id)}>X</button>
-         </div>
-         
          <div className={style.imageContainer}>
+            <button className={style.closeButton} onClick={() => onClose(id)}>X</button>
+            
             <img className={style.characterImage} src={image} alt='' />
-         </div>
-
-         <div>
+            {/* <h2 className={style.characterId}>ID: {id}</h2> */}
+            <hr />
+            <h2 className={style.name}>{name}</h2>
             <NavLink className={style.link} to={`/detail/${id}`}>
-               <h2 className={style.name}>{name}</h2>
+            <h2>+</h2>
             </NavLink> 
+
          </div>
 
          {/* <div>

@@ -2,13 +2,13 @@ const validation = (userData) => { // Va con minuscula porque es una funcion, no
     const errors = {};
 
     // errores en cuanto al email
-    if(!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(userData.email)){
-        errors.email = 'El email ingresado no es válido.'
-    }
     if(!userData.email){
         errors.email = 'Debe ingresar el email.'
     }
-    if(userData.email.length < 35) {
+    if(!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(userData.email)){
+        errors.email = 'El email ingresado no es válido.'
+    }
+    if(userData.email.length > 35) {
         errors.email = 'El email no puede superar los 35 caracteres.'
     }
 

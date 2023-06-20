@@ -1,5 +1,6 @@
-import { useState } from "react";
-import validation from "../Validation/Validation";
+import validation from '../Validation/Validation';
+import style from './Form.module.css'
+import { useState } from 'react';
 
 const Form = ({ login }) => {
     const [errors, setErrors] = useState({})
@@ -8,7 +9,7 @@ const Form = ({ login }) => {
         password: ''
     })
 
-    const handleChange = (event) => {
+    const handleChangeLogin = (event) => {
         setUserData({
             ...userData,
             [event.target.name]: event.target.value
@@ -25,17 +26,26 @@ const Form = ({ login }) => {
     }
 
     return(
-        <form onSubmit={handleSubmit}>
-            <label htmlFor="email">Email: </label>
-            <input type="email" name="email" value={userData.email} onChange={handleChange}/>
-            {errors.email && <p style={{color: 'red'}}>{errors.email}</p>}
-            <hr />
+        <form onSubmit={handleSubmit} className={style.login}>
+            <div className={style.loginContainer}>
+                <div>
+                    <label htmlFor="email">Email: </label>
+                    <input type="email" name="email" value={userData.email} onChange={handleChangeLogin}/>
+                    {errors.email && <p style={{color: 'red'}}>{errors.email}</p>}
+                    <hr />
+                </div>
 
-            <label htmlFor="password">Password: </label>
-            <input type="password" name="password" value={userData.password} onChange={handleChange}/>
-            {errors.password && <p style={{color: 'red'}}>{errors.password}</p>}
+                <div>
+                    <label htmlFor="password">Password: </label>
+                    <input type="password" name="password" value={userData.password} onChange={handleChangeLogin}/>
+                    {errors.password && <p style={{color: 'red'}}>{errors.password}</p>}
+                    <hr />
+                </div>
 
-            <button>Submit</button>
+                <div>
+                    <button>Submit</button>
+                </div>
+            </div>
         </form>
     )
 }

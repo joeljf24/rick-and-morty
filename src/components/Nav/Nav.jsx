@@ -1,8 +1,8 @@
 import SearchBar from '../SearchBar/SearchBar';
 import { NavLink } from 'react-router-dom';
 import style from './Nav.module.css';
-import { RandomIcon } from './styled.components';
-import { faShuffle, faHouse } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHouse, faUser, faShuffle, faStar, faRightFromBracket } from '@fortawesome/free-solid-svg-icons';
 
 
 const Nav = ({ onSearch, logout }) => {
@@ -14,21 +14,30 @@ const Nav = ({ onSearch, logout }) => {
     }
     
     return (
-        <nav className={style.topBar}>
-            
-            <button>
-                <NavLink icon={faHouse} to='/home'>HOME</NavLink>
-            </button>
+        <nav className={style.navBar}>
+            <div className={style.leftBar}>
+                <NavLink to='/home'>
+                    <button><FontAwesomeIcon icon={faHouse} /></button>
+                </NavLink>
 
-            <button>
-                <NavLink to='/about'>ABOUT</NavLink>
-            </button>
+                <NavLink to='/about'>
+                    <button><FontAwesomeIcon icon={faUser} /></button>
+                </NavLink>
 
-            <RandomIcon icon={faShuffle} onClick={randomize}></RandomIcon>
+                <button><FontAwesomeIcon icon={faStar} /></button>
+            </div>
 
-            <SearchBar onSearch={onSearch}/>
+            <div>
+                <button onClick={randomize}><FontAwesomeIcon icon={faShuffle} /></button>
+            </div>
 
-            <button onClick={logout}>LogOut</button>
+            <div>
+                <SearchBar onSearch={onSearch}/>
+            </div>
+
+            <div>
+                <button onClick={logout}><FontAwesomeIcon icon={faRightFromBracket} /></button>
+            </div>
         </nav>
     )
 }
