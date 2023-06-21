@@ -25,6 +25,7 @@
 
 .leftBar button:hover{
     background: radial-gradient(green, transparent);
+    transition: all 0.5s ease;
 }
 
 .leftBar button:focus{

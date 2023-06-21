@@ -15,6 +15,7 @@ const Nav = ({ onSearch, logout }) => {
     
     return (
         <nav className={style.navBar}>
+            
             <div className={style.leftBar}>
                 <NavLink to='/home'>
                     <button><FontAwesomeIcon icon={faHouse} /></button>
@@ -24,7 +25,9 @@ const Nav = ({ onSearch, logout }) => {
                     <button><FontAwesomeIcon icon={faUser} /></button>
                 </NavLink>
 
-                <button><FontAwesomeIcon icon={faStar} /></button>
+                <NavLink to='/favorites'>
+                    <button><FontAwesomeIcon icon={faStar} /></button>
+                </NavLink>
             </div>
 
             <div>
