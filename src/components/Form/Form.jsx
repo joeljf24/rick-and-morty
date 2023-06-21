@@ -1,6 +1,7 @@
 import validation from '../Validation/Validation';
 import style from './Form.module.css'
 import { useState } from 'react';
+import imgLogin from '../../assets/imgLogin.png'
 
 const Form = ({ login }) => {
     const [errors, setErrors] = useState({})
@@ -26,24 +27,28 @@ const Form = ({ login }) => {
     }
 
     return(
-        <form onSubmit={handleSubmit} className={style.login}>
-            <div className={style.loginContainer}>
+        <form onSubmit={handleSubmit} className={style.loginContainer}>
+            <div className={style.loginForm}>
                 <div>
-                    <label htmlFor="email">Email: </label>
-                    <input type="email" name="email" value={userData.email} onChange={handleChangeLogin}/>
+                    <img src={imgLogin} />
+                    <h2>Go into multiverse</h2>
+                </div>
+
+                <div>
+                    <label className={style.loginLabel} htmlFor="email">Email: </label>
+                    <input className={style.loginInput} type="email" name="email" value={userData.email} onChange={handleChangeLogin}/>
                     {errors.email && <p style={{color: 'red'}}>{errors.email}</p>}
                     <hr />
                 </div>
 
                 <div>
-                    <label htmlFor="password">Password: </label>
-                    <input type="password" name="password" value={userData.password} onChange={handleChangeLogin}/>
+                    <label className={style.loginLabel} htmlFor="password">Password: </label>
+                    <input className={style.loginInput} type="password" name="password" value={userData.password} onChange={handleChangeLogin}/>
                     {errors.password && <p style={{color: 'red'}}>{errors.password}</p>}
-                    <hr />
                 </div>
 
                 <div>
-                    <button>Submit</button>
+                    <button className={style.loginButton}>Log In</button>
                 </div>
             </div>
         </form>

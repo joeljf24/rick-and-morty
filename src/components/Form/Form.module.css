@@ -1,4 +1,78 @@
-.loginContainer{
+.loginContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    padding: 20px;
+    background-color: #EBECF0;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  }
+
+.loginContainer img {
+    height: 150px;
+    width: 150px;
+}
+.loginForm {
     display: flex;
     flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: -0.2px;
+    font-size: 16px;
+    padding: 16px;
+    width: 320px;
+    margin: 0 auto;
+}
+  
+.loginButton, .loginInput {
+    border: 0;
+    outline: 0;
+    font-size: 16px;
+    border-radius: 320px;
+    padding: 16px;
+    background-color: #EBECF0;
+    text-shadow: 1px 1px 0 #FFF;
+}
+
+.loginInput {
+    margin-right: 8px;
+    box-shadow:  inset 2px 2px 5px #BABECC, inset -5px -5px 10px #FFF;
+    width: 100%;
+    box-sizing: border-box;
+    transition: all 0.2s ease-in-out;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.loginInput:focus {
+    box-shadow:  inset 1px 1px 2px #BABECC, inset -1px -1px 2px #FFF;
+}
+
+.loginLabel {
+    display: block;
+    margin-bottom: 24px;
+    width: 100%;
+}
+
+.loginButton {
+    color:#61677C;
+    font-weight: bold;
+    box-shadow: -5px -5px 20px #FFF,  5px 5px 20px #BABECC;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    font-weight: 600;
+}
+  
+.loginButton:hover {
+    box-shadow: -2px -2px 5px #FFF, 2px 2px 5px #BABECC;
+    color: #FFF;
+    background-color: #16ec2f;
+    transition: all 0.3s ease-in-out;
+  }
+  
+.loginButton:active {
+    box-shadow: inset 1px 1px 2px #BABECC, inset -1px -1px 2px #FFF;
 }
