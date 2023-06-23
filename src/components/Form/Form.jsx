@@ -31,7 +31,7 @@ const Form = ({ login }) => {
             <div className={style.loginForm}>
                 <div>
                     <img src={imgLogin} />
-                    <h2>Go into multiverse</h2>
+                    <h2 className={style.tittle}>Go into multiverse</h2>
                 </div>
 
                 <div>

@@ -21,39 +21,40 @@ function Card({id, name, status, species, gender, origin, image, onClose, myFavo
 
    useEffect(() => {
       myFavorites.forEach((fav) => {
-         if (fav.id === id) {
+         if (fav.id === Number(id)) {
             setIsFav(true);
          }
       });
    }, [myFavorites]);
 
+
    return (
       <div className={style.cardContainer}>
-         
-         <div className={style.imageContainer}>
-            <div>
-               <button className={style.closeButton} onClick={() => onClose(id)}>X</button>
+            <div className={style.cardContainerTop}>
+               <div>
+                  <button className={style.closeButton} onClick={() => onClose(id)}>X</button>                
+               </div>
                
-               <img className={style.characterImage} src={image} alt='' />
-               {/* <h2 className={style.characterId}>ID: {id}</h2> */}
-               <hr />
+               <div className={style.imageContainer}>
+                  <img className={style.characterImage} src={image} alt='' />
+                  <h2 className={style.characterId}>ID: {id}</h2>
+               </div>
             </div>
 
-            <div>
+            <div className={style.cardContainerBottom}>
                <div>
                   <h2 className={style.name}>{name}</h2>
                </div>
 
-               <div>
+               <div className={style.functionsBottom}>
                   <NavLink className={style.link} to={`/detail/${id}`}>
                      <h2>+</h2>
                   </NavLink> 
                   
-                  <button onClick={handleFavorite}>{isFav? '❤️' : '🤍'}</button>
+                  <button className={style.favButton} onClick={handleFavorite}>{isFav? '❤️' : '🤍'}</button>
                </div>
 
             </div>
-         </div>
       </div>
    );
 }

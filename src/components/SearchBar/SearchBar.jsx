@@ -12,10 +12,10 @@ export default function SearchBar({onSearch}) {
 
    return (
       <div>
-         <form action="" className={style.searchBar}>
+         <div action="" className={style.searchBar}>
             <input placeholder='Intro ID (1-826)' type='search' onChange={handleChangeSearch} value={id}/>
             <button onClick={() => {onSearch(id); setId('')}}><FontAwesomeIcon icon={faMagnifyingGlass} /></button>
-         </form>
+         </div>
       </div>
    );
 }

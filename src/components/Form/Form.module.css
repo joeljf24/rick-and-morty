@@ -12,9 +12,20 @@
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   }
 
+.tittle {
+    margin-bottom: 40px;
+    font-family: 'Get Schwifty';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 60px;
+    color: #08BAE3;
+    -webkit-text-stroke: 1px #FFF765;
+}
+
 .loginContainer img {
     height: 150px;
     width: 150px;
+    margin: auto;
 }
 .loginForm {
     display: flex;

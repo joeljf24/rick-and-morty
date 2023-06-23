@@ -8,7 +8,7 @@ import { faHouse, faUser, faShuffle, faStar, faRightFromBracket } from '@fortawe
 const Nav = ({ onSearch, logout }) => {
     
     const randomize = () => {
-        for (let i = 0; i < 4; i++) {
+        for (let i = 0; i < 1; i++) {
             onSearch(Math.floor(Math.random() * 826));
         }
     }
