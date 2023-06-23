@@ -31,15 +31,15 @@ const Nav = ({ onSearch, logout }) => {
             </div>
 
             <div>
-                <button onClick={randomize}><FontAwesomeIcon icon={faShuffle} /></button>
+                <button className={style.randomButton} onClick={randomize}><FontAwesomeIcon icon={faShuffle} /></button>
             </div>
 
-            <div>
+            <div className={style.searchButton}>
                 <SearchBar onSearch={onSearch}/>
             </div>
 
             <div>
-                <button onClick={logout}><FontAwesomeIcon icon={faRightFromBracket} /></button>
+                <button className={style.logoutButton} onClick={logout}><FontAwesomeIcon icon={faRightFromBracket} /></button>
             </div>
         </nav>
     )

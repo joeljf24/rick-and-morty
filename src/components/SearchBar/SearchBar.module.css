@@ -1,12 +1,13 @@
 .searchBar {
     background: rgba(255, 255, 255, 0.2);
     display: flex;
+    max-width: 500px;
     border-radius: 60px;
     backdrop-filter: blur(4px);
 }
 
 .searchBar input{
-    width: 0;
+    width: 0px;
     max-width: 300px;
     background: transparent;
     padding: 0px 0px;
@@ -33,6 +34,8 @@
     border-radius: 50%;
     width: 50px;
     height: 50px;
-    background: #16ec2f;
+    color: white;
+    font-size: 20px;
+    background: #1cab2d;
     cursor: pointer;
 }
