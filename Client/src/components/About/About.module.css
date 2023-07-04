@@ -1,0 +1,12 @@
+.aboutContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.79);
+    border-radius: 15px;
+}
+
+.text{
+    display: flex;
+    color: white;
+}
