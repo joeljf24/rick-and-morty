@@ -10,15 +10,16 @@ const rootReducer = (state = initialState, {type, payload}) => {
         case ADD_FAV:
             return {
                 ...state,
-                myFavorites: [...state.allCharacters, payload],
-                allCharacters: [...state.allCharacters, payload],
-            }
+                myFavorites: payload,
+                allCharacters: payload
+            };
 
         case REMOVE_FAV:
             return {
                 ...state,
-                myFavorites: state.myFavorites.filter(fav => fav.id !== payload)
-            }
+                myFavorites: payload,
+                allCharacters: payload
+            };
 
         case FILTER:
             const allCharactersFiltered = state.allCharacters.filter(character => character.gender === payload)
